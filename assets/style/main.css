@@ -116,6 +116,9 @@ h2 {
 .browse-tags {
     max-width: 1200px;
 }
+    .browse-tags ul {
+        padding-left: 0;
+    }
     .browse-tags li {
         display: inline-block;
         white-space: nowrap;
@@ -126,3 +129,48 @@ h2 {
         font-weight: 400;
         font-size: 24px;
     }
+
+@media only screen and (max-width: 1000px) {
+    body {
+        font-size: 26px;
+    }
+    .collection .photo {
+        max-width: 100%;
+    }
+    .metadata {
+        font-weight: 400;
+    }
+        .metadata .tags li {
+            padding: 5px 10px;
+        }
+    .browse-tags li {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    body {
+        font-size: 20px;
+    }
+    .browse-tags li {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        font-size: 18px;
+    }
+    .browse-tags li {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    body {
+        font-size: 16px;
+    }
+    .browse-tags li {
+        font-size: 20px;
+    }
+}

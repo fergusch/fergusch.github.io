@@ -33,4 +33,44 @@
         #navbar td:first-child {
             width: 100%;
             background-color: transparent;
+            white-space: nowrap;
         }
+
+@media only screen and (max-width: 1000px) {
+    #navbar {
+        font-size: 30px;
+    }
+        #navbar a {
+            font-size: 26px;
+            font-weight: 400;
+        }
+}
+
+@media only screen and (max-width: 850px) {
+    #navbar {
+        font-size: 25px;
+    }
+        #navbar a {
+            font-size: 20px;
+        }
+}
+
+@media only screen and (max-width: 700px) {
+    #navbar {
+        font-size: 22px;
+    }
+        #navbar a {
+            font-size: 18px;
+            padding: 10px;
+        }
+}
+
+@media only screen and (max-width: 640px) {
+    #navbar {
+        font-size: 20px;
+    }
+        #navbar a {
+            font-size: 16px;
+            padding: 6px;
+        }
+}
