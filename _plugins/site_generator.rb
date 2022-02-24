@@ -26,7 +26,7 @@ module Jekyll
     end
 
     class CollectionPage < Page
-        def initialize(site, base, dir, title, url, photo_arr)
+        def initialize(site, base, dir, title, url, photo_arr, content='')
             @site = site
             @base = base
             @dir = dir
@@ -36,6 +36,7 @@ module Jekyll
             self.data['layout'] = 'collection'
             self.data['title'] = title
             self.data['photos'] = photo_arr
+            self.data['content'] = content
         end
     end
 
@@ -94,6 +95,14 @@ module Jekyll
             # create "browse tags" page
             browse_tags_page = Jekyll::BrowseTagsPage.new(site, site.source, @dir)
             site.pages << browse_tags_page
+
+            # create homepage with featured photos
+            featured_photos = site.data['photos'].select { |photo| photo['featured'] }
+            home_page = Jekyll::CollectionPage.new(
+                site, site.source, @dir, 'Home', '/index.md', featured_photos,
+                '<br /><h3><a href="/photos/">View all photos</a></h3>'
+            )
+            site.pages << home_page
 
         end
     end
