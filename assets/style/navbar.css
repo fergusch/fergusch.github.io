@@ -38,10 +38,10 @@
 
 @media only screen and (max-width: 1000px) {
     #navbar {
-        font-size: 30px;
+        font-size: 34px;
     }
         #navbar a {
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 400;
         }
 }
