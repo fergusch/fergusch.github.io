@@ -2,6 +2,13 @@
 <html>
     <head>
         {% include head.html %}
+        <meta property="og:title" content="{{ page.title }}">
+        {% if page.title == "Home" %}
+            <meta property="og:description" content="Featured photos">
+        {% else %}
+            <meta property="og:description" content="{{ page.photos.size }} photos">
+        {% endif %}
+        <meta property="og:image" content="https://photos.fergusch.net/assets/photos/{{ page.photos[0].file }}">
         <title>{{ page.title }} | Christian Ferguson</title>
     </head>
     <body>

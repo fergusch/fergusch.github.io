@@ -2,6 +2,9 @@
 <html>
     <head>
         {% include head.html %}
+        <meta property="og:title" content="Photo #{{ page.photo.id }}">
+        <meta property="og:description" content="Tags: {{ page.photo.tags | join: ', ' }}">
+        <meta property="og:image" content="https://photos.fergusch.net/assets/photos/{{ page.photo.file }}">
         <title>Photo #{{ page.photo.id }} | {{ page.photo.tags | slice: 1, 4 | join: ", "}} | Christian Ferguson</title>
     </head>
     <body>
