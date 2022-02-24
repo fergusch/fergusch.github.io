@@ -2,7 +2,7 @@
 <html>
     <head>
         {% include head.html %}
-        <title>Photo #{{ page.photo.id }} | Christian Ferguson</title>
+        <title>Photo #{{ page.photo.id }} | {{ page.photo.tags | slice: 1, 4 | join: ", "}} | Christian Ferguson</title>
     </head>
     <body>
         {% include navbar.html %}

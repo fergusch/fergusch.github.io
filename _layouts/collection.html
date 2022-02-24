@@ -15,7 +15,7 @@
             {% endif %}
             {% for photo in page.photos %}
                 <a href="/photo/{{ photo.id }}/">
-                    <img class="photo" src="/assets/photos/{{ photo.file }}" />
+                    <img title="Tags: {{ photo.tags | join: ', ' }}" class="photo" src="/assets/photos/{{ photo.file }}" />
                 </a>
             {% endfor %}
         </div>
