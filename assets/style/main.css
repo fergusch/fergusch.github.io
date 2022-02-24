@@ -116,3 +116,25 @@ h2 {
                 .metadata .tags a:hover {
                     text-decoration: underline;
                 }
+
+.browse-tags {
+    max-width: 1200px;
+}
+    .browse-tags li {
+        display: inline-block;
+        white-space: nowrap;
+        margin: 5px;
+        padding: 5px 15px;
+        border-radius: 20px;
+        background-color: #3A3A3A;
+        font-weight: 400;
+        font-size: 24px;
+    }
+
+    .browse-tags a {
+        color: #6ca8e8;
+    }
+
+        .browse-tags a:hover {
+            text-decoration: underline;
+        }

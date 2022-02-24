@@ -39,6 +39,18 @@ module Jekyll
         end
     end
 
+    class BrowseTagsPage < Page
+        def initialize(site, base, dir)
+            @site = site
+            @base = base
+            @dir = dir
+            @name = '/tags/index.md'
+            self.process(@name)
+            self.data ||= {}
+            self.data['layout'] = 'browse_tags'
+        end
+    end
+
     class SiteGenerator < Generator
         def generate(site)
 
@@ -78,6 +90,10 @@ module Jekyll
                 site, site.source, @dir, 'All photos', '/photos/index.md', site.data['photos']
             )
             site.pages << all_photos_page
+
+            # create "browse tags" page
+            browse_tags_page = Jekyll::BrowseTagsPage.new(site, site.source, @dir)
+            site.pages << browse_tags_page
 
         end
     end
