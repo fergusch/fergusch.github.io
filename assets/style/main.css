@@ -64,9 +64,40 @@ h1 {
         color: #888888;
     }
 
+        .metadata td:first-child {
+            width: 1px;
+            white-space: nowrap;
+            padding-right: 50px;
+            border-right: 1px solid #444444;
+        }
+
+        .metadata td:last-child {
+            padding-left: 50px;
+        }
+
     .metadata h4 {
         margin-top: 0;
         margin-bottom: 10px;
         font-weight: 600;
         color: #CCCCCC;
     }
+
+    .metadata .tags {
+        padding: 0;
+        margin: 0;
+    }
+
+        .metadata .tags li {
+            display: inline-block;
+            white-space: nowrap;
+            margin: 5px;
+            padding: 2px 8px;
+            border-radius: 20px;
+            color: white;
+            background-color: #3A3A3A;
+            font-weight: 400;
+        }
+
+            .metadata .tags li:first-child {
+                margin-left: 0;
+            }
