@@ -8,6 +8,7 @@
         {% include navbar.html %}
         <div class="width-container browse-tags">
             <div class="centered">
+                <h1>Browse tags</h1>
                 <ul>
                     {% for tag in site.data.tags %}
                         <li><a href="/tag/{{ site.data.tag_urls[tag] }}/">{{ tag }}</a></li>
