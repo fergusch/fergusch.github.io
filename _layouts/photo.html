@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include head.html %}
+        <title>Photo #{{ page.photo.id }} | Christian Ferguson</title>
+    </head>
+    <body>
+        {% include navbar.html %}
+        <div class="centered">
+            <img class="photo display no-select" src="/assets/photos/{{ page.photo.file }}" />
+            <div class="width-container">
+                <table class="metadata">
+                    <tr>
+                        <td>
+                            <h4>Date taken</h4>
+                            {{ page.photo.date }}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        {% include footer.html %}
+    </body>
+</html>

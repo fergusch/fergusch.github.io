@@ -18,6 +18,15 @@ h1 {
     margin-bottom: 40px;
 }
 
+.no-select {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+  }
+
 .width-container {
     width: 90%;
     max-width: 1000px;
@@ -33,3 +42,31 @@ h1 {
     max-width: 700px;
     margin: 5px;
 }
+
+    .collection .photo:hover {
+        opacity: 0.7;
+    }
+
+.photo.display {
+    width: 100%;
+    max-width: 1920px;
+    pointer-events: none;
+}
+
+.metadata {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+    .metadata td {
+        vertical-align: top;
+        color: #888888;
+    }
+
+    .metadata h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: #CCCCCC;
+    }
