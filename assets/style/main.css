@@ -18,6 +18,14 @@ h1 {
     margin-bottom: 40px;
 }
 
+h2 {
+    font-weight: 100;
+    font-size: 16px;
+    color: #AAAAAA;
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+
 .no-select {
     -webkit-touch-callout: none;
       -webkit-user-select: none;
@@ -93,7 +101,6 @@ h1 {
             margin: 5px;
             padding: 2px 8px;
             border-radius: 20px;
-            color: white;
             background-color: #3A3A3A;
             font-weight: 400;
         }
@@ -101,3 +108,11 @@ h1 {
             .metadata .tags li:first-child {
                 margin-left: 0;
             }
+
+            .metadata .tags a {
+                color: #6ca8e8;
+            }
+
+                .metadata .tags a:hover {
+                    text-decoration: underline;
+                }

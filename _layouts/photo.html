@@ -19,7 +19,7 @@
                             <h4>Tags</h4>
                             <ul class="tags">
                                 {% for tag in page.photo.tags %}
-                                    <li>{{ tag }}</li>
+                                    <li><a href="/tag/{{ site.data.tag_urls[tag] }}/">{{ tag }}</a></li>
                                 {% endfor %}
                             </ul>
                         </td>
