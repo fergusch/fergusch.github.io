@@ -1,0 +1,36 @@
+#navbar {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    cursor: default;
+}
+
+    #navbar a {
+        display: block;
+        white-space: nowrap;
+        color: #DDD;
+        font-size: 16px;
+        font-weight: 100;
+        padding: 15px;
+        cursor: pointer;
+    }
+        #navbar a:hover {
+            color: white;
+            background-color: #222222;
+        }
+    
+    #navbar img {
+        vertical-align: baseline;
+        margin-left: 5px;
+        pointer-events: none;
+    }
+
+    #navbar td {
+        width: 1px;
+        line-height: 80px;
+    }
+
+        #navbar td:first-child {
+            width: 100%;
+            background-color: transparent;
+        }
