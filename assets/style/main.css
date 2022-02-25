@@ -35,6 +35,21 @@ h3 {
     font-size: 22px;
 }
 
+.tap-hint {
+    display: none;
+    background-color: rgba(26, 26, 26, 0.85);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 35px;
+    color: #AAAAAA;
+    text-align: center;
+    padding: 25px 0;
+    z-index: 100;
+}
+
 .no-select {
     -webkit-touch-callout: none;
       -webkit-user-select: none;
@@ -141,10 +156,14 @@ h3 {
     h2 {
         font-size: 30px;
         margin-top: 40px;
+        margin-bottom: -30px;
         font-weight: 400;
     }
     h3 {
         font-size: 40px;
+    }
+    .tap-hint {
+        display: block;
     }
     .collection .photo {
         max-width: 100%;
@@ -165,6 +184,12 @@ h3 {
     body {
         font-size: 20px;
     }
+    h2 {
+        margin-bottom: -15px;
+    }
+    .tap-hint {
+        font-size: 30px;
+    }
     .browse-tags li {
         font-size: 26px;
     }
@@ -177,6 +202,10 @@ h3 {
     h2 {
         font-size: 22px;
     }
+    .tap-hint {
+        font-size: 25px;
+        padding: 15px 0;
+    }
     .browse-tags li {
         font-size: 22px;
     }
@@ -185,6 +214,9 @@ h3 {
 @media only screen and (max-width: 640px) {
     body {
         font-size: 16px;
+    }
+    .tap-hint {
+        font-size: 20px;
     }
     .browse-tags li {
         font-size: 20px;
