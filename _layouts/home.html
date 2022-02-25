@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include head.html %}
+        <meta property="og:title" content="{{ page.title }}">
+        {% if page.title == "Home" %}
+            <meta property="og:description" content="Featured photos">
+        {% else %}
+            <meta property="og:description" content="{{ page.photos.size }} photos">
+        {% endif %}
+        <meta property="og:image" content="https://photos.fergusch.net/assets/photos/{{ page.photos[0].file }}">
+        <title>{{ page.title }} | Christian Ferguson</title>
+    </head>
+    <body>
+        {% include navbar.html %}
+        <div class="tap-hint">Tap images for more info</div>
+        <div class="centered collection">
+            <h1>Featured photos</h1>
+            {% for photo in page.photos %}
+                <a href="/photo/{{ photo.id }}/">
+                    <img title="Tags: {{ photo.tags | join: ', ' }}" class="photo no-select" src="/assets/photos/{{ photo.file }}" />
+                </a>
+            {% endfor %}
+        </div>
+        <br />
+        <div class="width-container centered browse-tags">
+            <h1>Top tags</h1>
+            <ul>
+                {% for tag in page.top_tags %}
+                    <li><a href="/tag/{{ site.data.tag_urls[tag] }}/">{{ tag }}</a><sup>({{ site.data.tag_counts[tag] }})</sup></li>
+                {% endfor %}
+            </ul>
+            <br />
+            <br />
+            <h1><a href="/photos/">View all photos &rarr;</a></h1>
+            <br />
+        </div>
+        {% include footer.html %}
+    </body>
+</html>

@@ -40,6 +40,14 @@ module Jekyll
         end
     end
 
+    class HomePage < CollectionPage
+        def initialize(site, base, dir, featured_photos, top_tags)
+            super(site, base, dir, 'Home', '/index.md', featured_photos)
+            self.data['layout'] = 'home'
+            self.data['top_tags'] = top_tags
+        end
+    end
+
     class BrowseTagsPage < Page
         def initialize(site, base, dir)
             @site = site
@@ -81,7 +89,11 @@ module Jekyll
                                                                    .gsub('(', '')
                                                                    .gsub(')', '')
                                                                    .gsub('/', '-')]}.to_h
+            site.data['tag_counts'] = site.data['tags'].map { |tag| [
+                tag, site.data['photos'].select { |photo| photo['tags'].include?(tag) }.length()
+            ]}.to_h
 
+            # generate tag pages
             site.data['tags'].each do |tag|
                 tagged_photos = site.data['photos'].select { |photo| photo['tags'].include?(tag) }
                 tag_page = Jekyll::CollectionPage.new(
@@ -102,9 +114,9 @@ module Jekyll
 
             # create homepage with featured photos
             featured_photos = site.data['photos'].select { |photo| photo['featured'] }
-            home_page = Jekyll::CollectionPage.new(
-                site, site.source, @dir, 'Home', '/index.md', featured_photos,
-                '<br /><h3><a href="/photos/">View all photos</a></h3>'
+            home_page = Jekyll::HomePage.new(
+                site, site.source, @dir, featured_photos,
+                site.data['tag_counts'].sort_by{|k,v| -v}.to_h.keys.slice(0, 12)
             )
             site.pages << home_page
 

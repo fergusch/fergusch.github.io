@@ -13,7 +13,7 @@
                 <ul>
                     {% assign sorted_tags = site.data.tags | sort %}
                     {% for tag in sorted_tags %}
-                        <li><a href="/tag/{{ site.data.tag_urls[tag] }}/">{{ tag }}</a></li>
+                        <li><a href="/tag/{{ site.data.tag_urls[tag] }}/">{{ tag }}</a><sup>({{ site.data.tag_counts[tag] }})</sup></li>
                     {% endfor %}
                 </ul>
             </div>
