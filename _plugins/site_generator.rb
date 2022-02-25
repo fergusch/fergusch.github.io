@@ -116,7 +116,7 @@ module Jekyll
             featured_photos = site.data['photos'].select { |photo| photo['featured'] }
             home_page = Jekyll::HomePage.new(
                 site, site.source, @dir, featured_photos,
-                site.data['tag_counts'].sort_by{|k,v| -v}.to_h.keys.slice(0, 12)
+                site.data['tag_counts'].sort_by{|k,v| -v}.to_h.keys.slice(0, 15)
             )
             site.pages << home_page
 
