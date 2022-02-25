@@ -76,7 +76,11 @@ module Jekyll
 
             # generate tag page URLs
             site.data['tags'] = tags.to_a
-            site.data['tag_urls'] = tags.to_a.map { |tag| [tag, tag.downcase.gsub(' ', '-').gsub('(', '').gsub(')', '')]}.to_h
+            site.data['tag_urls'] = tags.to_a.map { |tag| [tag, tag.downcase
+                                                                   .gsub(' ', '-')
+                                                                   .gsub('(', '')
+                                                                   .gsub(')', '')
+                                                                   .gsub('/', '-')]}.to_h
 
             site.data['tags'].each do |tag|
                 tagged_photos = site.data['photos'].select { |photo| photo['tags'].include?(tag) }
