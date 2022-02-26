@@ -6,6 +6,13 @@
     color: #999999;
 }
 
+@media only screen and (max-width: 1240px) {
+    .footer {
+        font-weight: 200;
+        font-size: 18px;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     .footer {
         font-weight: 400;
@@ -15,7 +22,7 @@
     }
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 900px) {
     .footer {
         font-size: 18px;
     }

@@ -153,6 +153,21 @@ h3 {
             color: #CCCCCC;
         }
 
+@media only screen and (max-width: 1440px) {
+    .collection .photo {
+        max-width: 600px;
+    }
+}
+
+@media only screen and (max-width: 1240px) {
+    .collection .photo {
+        max-width: 520px;
+    }
+    .browse-tags li sup {
+        font-weight: 200;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     body {
         font-size: 26px;
@@ -187,7 +202,7 @@ h3 {
         }
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 900px) {
     body {
         font-size: 20px;
     }
