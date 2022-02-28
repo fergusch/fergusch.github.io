@@ -8,7 +8,7 @@
         {% else %}
             <meta property="og:description" content="{{ page.photos.size }} photos">
         {% endif %}
-        <meta property="og:image" content="https://photos.fergusch.net/assets/photos/{{ page.photos[0].file }}">
+        <meta property="og:image" content="https://photos.fergusch.net/assets/photos/preview/{{ page.photos[0].file }}">
         <title>{{ page.title }} | Christian Ferguson</title>
     </head>
     <body>
@@ -24,7 +24,7 @@
             {% endif %}
             {% for photo in page.photos %}
                 <a href="/photo/{{ photo.id }}/">
-                    <img title="Tags: {{ photo.tags | join: ', ' }}" class="photo no-select" src="/assets/photos/{{ photo.file }}" />
+                    <img title="Tags: {{ photo.tags | join: ', ' }}" class="photo no-select" src="/assets/photos/preview/{{ photo.file }}" />
                 </a>
             {% endfor %}
         </div>

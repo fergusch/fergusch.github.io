@@ -1,5 +1,8 @@
 require 'date'
+require 'fileutils'
+require 'mini_magick'
 require 'set'
+require 'tqdm'
 require 'xxhash'
 
 module Jekyll
@@ -64,6 +67,7 @@ module Jekyll
         def generate(site)
 
             tags = Set.new
+            FileUtils.mkdir_p('./assets/photos/preview')
 
             site.data['photos'].each do |photo_data|
                 # add auto-generated metadata to photos
@@ -80,6 +84,18 @@ module Jekyll
                     site, site.source, @dir, photo_data
                 )
                 site.pages << photo_page
+            end
+
+            # generate preview images
+            if ENV['JEKYLL_ENV'] == 'production' or not File.directory?('_site/assets/photos/preview')
+                puts "Generating preview images..."
+                site.data['photos'].tqdm.each do |photo_data|
+                    image = MiniMagick::Image.open("assets/photos/#{photo_data['file']}")
+                    image.resize('40%')
+                    image.write("assets/photos/preview/#{photo_data['file']}")
+                    preview_file = Jekyll::StaticFile.new(site, site.source, 'assets/photos/preview/', photo_data['file'])
+                    site.static_files << preview_file
+                end
             end
 
             # generate tag page URLs
