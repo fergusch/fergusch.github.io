@@ -128,7 +128,7 @@ h3 {
             display: inline-block;
             white-space: nowrap;
             margin: 5px;
-            padding: 2px 8px;
+            padding: 4px 10px;
             border-radius: 20px;
             background-color: #3A3A3A;
             font-weight: 400;
@@ -204,7 +204,7 @@ h3 {
         }
         .metadata .tags li {
             font-size: 26px;
-            padding: 5px 10px;
+            padding: 5px 12px;
         }
     .browse-tags li {
         font-size: 36px;
@@ -227,6 +227,7 @@ h3 {
     }
     .metadata .tags li {
         font-size: 20px;
+        padding: 5px 10px;
     }
     .metadata h4 {
         font-size: 24px;
