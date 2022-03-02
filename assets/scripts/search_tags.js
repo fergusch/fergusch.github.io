@@ -1,4 +1,5 @@
 var search_box = document.getElementById('search');
+search_box.focus();
 search_box.onkeyup = function() {
     var search_terms = search_box.value.toLowerCase().replace(/\s{2,}/g, ' ').trim().split(' ');
     var results_len = 0;
