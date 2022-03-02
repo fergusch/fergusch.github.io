@@ -10,6 +10,8 @@
         <div class="width-container browse-tags">
             <div class="centered">
                 <h1>Browse tags</h1>
+                <input type="text" id="search" placeholder="Type to search" autocomplete="off" />
+                <h2 id="no-results">No results</h2>
                 <ul>
                     {% assign sorted_tags = site.data.tags | sort %}
                     {% for tag in sorted_tags %}
@@ -18,6 +20,7 @@
                 </ul>
             </div>
         </div>
+        <script src="/assets/scripts/search_tags.js"></script>
         {% include footer.html %}
     </body>
 </html>
