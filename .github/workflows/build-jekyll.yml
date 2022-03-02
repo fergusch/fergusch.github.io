@@ -1,4 +1,4 @@
-name: Build and Deploy to Github Pages
+name: jekyll-pre-build
 on: [push]
 jobs:
   build_and_deploy:
