@@ -1,4 +1,4 @@
-# fergusch.github.io
+# [fergusch.github.io](https://fergusch.github.io)
 
 My personal photography portfolio, hacked together with Jekyll and a custom Ruby plugin.
 
