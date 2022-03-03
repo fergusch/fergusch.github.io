@@ -84,3 +84,16 @@
             padding: 6px;
         }
 }
+
+@media only screen and (max-width: 500px) {
+    #navbar {
+        font-size: 17px;
+    }
+    #navbar img {
+        display: none;
+    }
+    #navbar a {
+        font-size: 15px;
+        padding: 5px;
+    }
+}
