@@ -189,6 +189,39 @@ h3 {
             display: none;
         }
 
+#contact input[type="text"], #contact textarea, #contact button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 14px;
+    margin: 3px;
+    font-family: inherit;
+    font-size: 18px;
+    text-align: left;
+    color: #CCCCCC;
+    background-color: #3A3A3A;
+}
+    #contact input[type="text"] {
+        width: 300px;
+    }
+    #contact textarea {
+        width: 637px;
+        margin-top: 5px;
+    }
+    #contact button {
+        padding: 15px 30px;
+        cursor: pointer;
+    }
+        #contact button:hover {
+            background-color: #555555;
+        }
+    #contact .g-recaptcha {
+        display: inline-block;
+        margin: 30px auto;
+    }
+    #contact input:focus, #contact textarea:focus {
+        outline: none;
+    }
+
 @media only screen and (max-width: 1440px) {
     .collection .photo {
         max-width: 600px;

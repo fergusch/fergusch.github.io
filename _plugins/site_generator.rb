@@ -63,6 +63,18 @@ module Jekyll
         end
     end
 
+    class ContactPage < Page
+        def initialize(site, base, dir)
+            @site = site
+            @base = base
+            @dir = dir
+            @name = '/contact/index.md'
+            self.process(@name)
+            self.data ||= {}
+            self.data['layout'] = 'contact'
+        end
+    end
+
     class SiteGenerator < Generator
         def generate(site)
 
@@ -127,6 +139,10 @@ module Jekyll
             # create "browse tags" page
             browse_tags_page = Jekyll::BrowseTagsPage.new(site, site.source, @dir)
             site.pages << browse_tags_page
+
+            # create contact page
+            contact_page = Jekyll::ContactPage.new(site, site.source, @dir)
+            site.pages << contact_page
 
             # create homepage with featured photos
             featured_photos = site.data['photos'].select { |photo| photo['featured'] }

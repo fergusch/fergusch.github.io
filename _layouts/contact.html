@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include head.html %}
+        <title>Contact | Christian Ferguson</title>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+    <body>
+        {% include navbar.html %}
+        <div class="width-container centered">
+            <h1>Contact</h1>
+            <form id="contact" action="https://usebasin.com/f/c72fdeb46887" method="POST">
+                <input type="text" name="name" placeholder="Name *" required/>
+                <input type="text" name="email" placeholder="Your email *" required>
+                <br />
+                <textarea name="message" rows="6" placeholder="Message *" required></textarea>
+                <input type="hidden" name="_nothingtoseehere">
+                <br />
+                <div class="g-recaptcha" data-theme="dark" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"></div>
+                <br />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        {% include footer.html %}
+    </body>
+</html>
