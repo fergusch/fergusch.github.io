@@ -1,3 +1,36 @@
 #search, #no-results {
     display: none;
 }
+#navbar-mobile-overlay {
+    position: relative;
+    height: auto;
+    text-align: center;
+}
+    #navbar-mobile-overlay ul {
+        margin-top: -60px;
+        margin-bottom: 100px;
+    }
+    #navbar-mobile-overlay img, #navbar-mobile td:last-child img {
+        display: none;
+    }
+    #navbar-mobile-overlay li {
+        display: inline-block;
+    }
+        #navbar-mobile-overlay li a {
+            width: auto;
+            padding: 0 20px;
+            font-size: 30px;
+        }
+
+@media only screen and (max-width: 1000px) {
+    #navbar-mobile-overlay {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #navbar-mobile-overlay li a {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+}

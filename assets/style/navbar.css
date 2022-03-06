@@ -36,6 +36,65 @@
             white-space: nowrap;
         }
 
+#navbar-mobile {
+    display: none;
+    padding: 60px 10px;
+    font-size: 50px;
+    font-weight: 600;
+    box-sizing: border-box;
+    margin-bottom: 60px;
+}
+
+    #navbar-mobile td:first-child {
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    #navbar-mobile td:first-child img {
+        pointer-events: none;
+        margin-left: 7px;
+    }
+
+    #navbar-mobile td:last-child img {
+        vertical-align: middle;
+        cursor: pointer;
+        margin-top: -10px;
+    }
+
+#navbar-mobile-overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1a1a1a;
+    z-index: 1000;
+}
+
+    #navbar-mobile-overlay img {
+        position: absolute;
+        top: 65px;
+        right: 60px;
+        z-index: 1001;
+        cursor: pointer;
+    }
+
+    #navbar-mobile-overlay ul {
+        list-style: none;
+        margin-top: 140px;
+        padding-left: 0;
+    }
+
+        #navbar-mobile-overlay li a {
+            display: block;
+            width: 100%;
+            padding: 50px 80px;
+            font-size: 60px;
+            font-weight: 400;
+            color: white;
+        }
+
 @media only screen and (max-width: 1240px) {
     #navbar {
         font-size: 22px;
@@ -48,52 +107,68 @@
 
 @media only screen and (max-width: 1000px) {
     #navbar {
-        font-size: 34px;
+        display: none;
     }
-        #navbar a {
-            font-size: 28px;
-            font-weight: 400;
-        }
-}
-
-@media only screen and (max-width: 900px) {
-    #navbar {
-        font-size: 25px;
+    #navbar-mobile {
+        display: block;
     }
-        #navbar a {
-            font-size: 20px;
-        }
 }
 
 @media only screen and (max-width: 700px) {
-    #navbar {
-        font-size: 22px;
+    #navbar-mobile {
+        font-size: 40px;
     }
-        #navbar a {
-            font-size: 18px;
-            padding: 10px;
-        }
+    #navbar-mobile-overlay img {
+        top: 60px;
+        right: 45px;
+    }
+    #navbar-mobile-overlay li a {
+        font-size: 50px;
+        padding: 40px 80px;
+    }
 }
 
 @media only screen and (max-width: 640px) {
-    #navbar {
-        font-size: 20px;
+    #navbar-mobile {
+        font-size: 35px;
     }
-        #navbar a {
-            font-size: 16px;
-            padding: 6px;
+        #navbar-mobile td:first-child img {
+            width: 30px;
+            height: 30px;
+        }
+        #navbar-mobile td:last-child img {
+            width: 40px;
+            height: 40px;
+        }
+        #navbar-mobile-overlay img {
+            width: 40px;
+            height: 40px;
+            right: 35px;
+        }
+        #navbar-mobile-overlay li a {
+            font-size: 40px;
+            padding: 30px 80px;
         }
 }
 
 @media only screen and (max-width: 500px) {
-    #navbar {
-        font-size: 17px;
+    #navbar-mobile {
+        font-size: 28px;
     }
-    #navbar img {
-        display: none;
-    }
-    #navbar a {
-        font-size: 15px;
-        padding: 5px;
-    }
+        #navbar-mobile td:first-child img {
+            width: 28px;
+            height: 28px;
+        }
+        #navbar-mobile td:last-child img {
+            width: 35px;
+            height: 35px;
+        }
+        #navbar-mobile-overlay img {
+            width: 35px;
+            height: 35px;
+        }
+        #navbar-mobile-overlay li a {
+            font-size: 30px;
+            padding: 25px 60px;
+        }
 }
