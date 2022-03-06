@@ -1,3 +1,28 @@
+@font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 100;
+    src: url('/assets/fonts/PublicSans/PublicSans-Thin.ttf')
+}
+@font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 200;
+    src: url('/assets/fonts/PublicSans/PublicSans-ExtraLight.ttf')
+}
+@font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/PublicSans/PublicSans-Regular.ttf')
+}
+@font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/assets/fonts/PublicSans/PublicSans-SemiBold.ttf')
+}
+
 html, body {
     margin: 0;
     padding: 0;
